@@ -13,6 +13,10 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.regularizers import l2
 from tensorflow.random import set_seed
 
+
+
+
+
 from spektral.data.loaders import SingleLoader
 from spektral.datasets.citation import Citation
 from spektral.layers import GATConv
@@ -39,8 +43,8 @@ n_attn_heads = 8  # Number of attention heads in first GAT layer
 dropout = 0.6  # Dropout rate for the features and adjacency matrix
 l2_reg = 2.5e-4  # L2 regularization rate
 learning_rate = 5e-3  # Learning rate
-epochs = 20000  # Number of training epochs
-patience = 100  # Patience for early stopping
+epochs =500# 20000  # Number of training epochs
+patience = 10#100  # Patience for early stopping
 
 N = dataset.n_nodes  # Number of nodes in the graph
 F = dataset.n_node_features  # Original size of node features

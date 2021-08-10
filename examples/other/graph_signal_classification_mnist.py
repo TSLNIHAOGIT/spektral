@@ -7,6 +7,13 @@ from tensorflow.keras.metrics import sparse_categorical_accuracy
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.regularizers import l2
 
+import sys,os
+path=os.path.join(os.path.dirname(__file__),'../..')
+path=os.path.abspath(path)
+print(path)
+sys.path.insert(0,path)
+#将路径加入，使用自定义的spektral,否则会使用安装的spektral E:\tsl_file\python_project\spektral\spektral
+print(sys.path)
 from spektral.data import MixedLoader
 from spektral.datasets.mnist import MNIST
 from spektral.layers import GCNConv, GlobalSumPool

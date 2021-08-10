@@ -124,9 +124,11 @@ class Citation(Dataset):
 
     def download(self):
         print("Downloading {} dataset.".format(self.name))
+        print('self.url.format(f_name)', self.url.format(self.name))
         os.makedirs(self.path, exist_ok=True)
         for n in self.suffixes:
             f_name = "ind.{}.{}".format(self.name, n)
+
             req = requests.get(self.url.format(f_name))
             if req.status_code == 404:
                 raise ValueError(

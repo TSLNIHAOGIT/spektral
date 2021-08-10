@@ -18,7 +18,7 @@ from spektral.transforms import LayerPreprocess
 
 learning_rate = 1e-2
 seed = 0
-epochs = 200
+epochs = 500
 patience = 10
 data = "cora"
 
